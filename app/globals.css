@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-brand-black font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-brand-black text-white;
+  }
+}
+
+/* ロゴフォント */
+.font-logo {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+@layer components {
+  .section-heading {
+    @apply text-[10px] tracking-widest2 text-brand-gray uppercase font-sans mb-2;
+  }
+
+  .section-title {
+    @apply font-serif text-xl md:text-2xl font-light tracking-widest text-brand-black mb-0;
+  }
+
+  /* flowwwers スタイル：テキストリンクボタン */
+  .btn-text {
+    @apply text-[10px] tracking-widest2 border-b border-brand-black pb-0.5
+           hover:text-brand-gray hover:border-brand-gray transition-colors duration-300;
+  }
+
+  /* ソリッドボタン（カート等） */
+  .btn-primary {
+    @apply inline-block border border-brand-black text-brand-black text-[10px] tracking-widest2 uppercase px-8 py-3
+           hover:bg-brand-black hover:text-white transition-colors duration-300;
+  }
+
+  .btn-secondary {
+    @apply inline-block bg-brand-black text-white text-[10px] tracking-widest2 uppercase px-8 py-3
+           hover:bg-opacity-80 transition-colors duration-300;
+  }
+}
+
+/* スクロールバー */
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: #fafafa;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+}

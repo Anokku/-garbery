@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <rect width="1920" height="1080" fill="#1A1A1A"/>
+  <rect width="1920" height="1080" fill="url(#vg)"/>
+  <defs>
+    <linearGradient id="vg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2A2A2A"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </linearGradient>
+  </defs>
+  <text x="960" y="490" font-family="Georgia,serif" font-size="110" fill="#FFFFFF" text-anchor="middle" letter-spacing="40" opacity="0.08">GARBERY</text>
+  <text x="960" y="560" font-family="Arial,sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" letter-spacing="10" opacity="0.18">2026 AUTUMN / WINTER COLLECTION</text>
+  <line x1="860" y1="580" x2="900" y2="580" stroke="#FFFFFF" stroke-width="0.5" opacity="0.2"/>
+  <line x1="1020" y1="580" x2="1060" y2="580" stroke="#FFFFFF" stroke-width="0.5" opacity="0.2"/>
+</svg>
