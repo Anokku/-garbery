@@ -7,11 +7,6 @@ const navLinks = [
   { href: '/contact',  label: 'CONTACT' },
 ]
 
-const legalLinks = [
-  { href: '/privacy',  label: 'プライバシーポリシー' },
-  { href: '/terms',    label: '特定商取引法' },
-  { href: '/shipping', label: '送料・返品' },
-]
 
 export default function Footer() {
   return (
@@ -72,20 +67,6 @@ export default function Footer() {
 
         {/* 区切り線 */}
         <div className="border-t border-brand-border pt-8">
-          {/* 法務リンク */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-4">
-            {legalLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-[10px] text-brand-gray hover:text-brand-black transition-colors tracking-wide"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-
-          {/* コピーライト */}
           <p className="text-center text-[10px] text-brand-gray tracking-widest">
             © 2026 GARBERY
           </p>
