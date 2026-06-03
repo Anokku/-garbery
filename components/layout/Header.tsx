@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation'
 const navLinks = [
   { href: '/',                           label: 'HOME',       external: false },
   { href: '/concept',                    label: 'concept',    external: false },
-  { href: 'https://garbery.official.ec', label: 'SHOP',       external: true  },
+  { href: '/products',                   label: 'SHOP',       external: false },
   { href: '/membership',                 label: 'MEMBERSHIP', external: false },
   { href: '/contact',                    label: 'CONTACT',    external: false },
 ]

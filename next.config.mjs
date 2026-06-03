@@ -4,7 +4,11 @@ const config = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    remotePatterns: [],
+    remotePatterns: [
+      { protocol: 'https', hostname: '*.amazonaws.com' },
+      { protocol: 'https', hostname: '*.base.ec' },
+      { protocol: 'https', hostname: '*.imgix.net' },
+    ],
     formats: ['image/avif', 'image/webp'],
   },
 }

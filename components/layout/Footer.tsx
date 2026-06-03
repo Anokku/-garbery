@@ -3,7 +3,7 @@ import Link from 'next/link'
 const navLinks = [
   { href: '/',         label: 'HOME' },
   { href: '/concept',  label: 'concept' },
-  { href: 'https://garbery.official.ec', label: 'SHOP' },
+  { href: '/products', label: 'SHOP' },
   { href: '/contact',  label: 'CONTACT' },
 ]
 

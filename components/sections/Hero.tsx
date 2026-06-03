@@ -53,14 +53,12 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.9 }}
         >
-          <a
-            href="https://garbery.official.ec"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/products"
             className="text-[10px] tracking-widest2 text-white border-b border-white/50 pb-0.5 hover:border-white transition-colors duration-300"
           >
             SHOP NOW
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
