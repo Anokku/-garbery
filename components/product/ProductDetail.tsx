@@ -104,7 +104,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                     title={color.name}
                     aria-label={color.name}
                     aria-pressed={selectedColor === color.name}
-                    className={`w-7 h-7 rounded-full border-2 transition-all ${
+                    className={`w-9 h-9 rounded-full border-2 transition-all ${
                       selectedColor === color.name
                         ? 'border-brand-black ring-1 ring-brand-black ring-offset-1'
                         : 'border-brand-border'

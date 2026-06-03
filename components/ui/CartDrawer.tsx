@@ -42,7 +42,7 @@ export default function CartDrawer() {
               <button
                 onClick={closeCart}
                 aria-label="カートを閉じる"
-                className="text-brand-gray hover:text-brand-black transition-colors"
+                className="text-brand-gray hover:text-brand-black transition-colors p-2 -mr-2"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <line x1="18" y1="6" x2="6" y2="18" />
@@ -92,7 +92,7 @@ export default function CartDrawer() {
                                 },
                               })
                             }
-                            className="w-6 h-6 border border-brand-border flex items-center justify-center text-xs hover:bg-brand-light"
+                            className="w-9 h-9 border border-brand-border flex items-center justify-center text-xs hover:bg-brand-light"
                             aria-label="数量を減らす"
                           >
                             −
@@ -110,7 +110,7 @@ export default function CartDrawer() {
                                 },
                               })
                             }
-                            className="w-6 h-6 border border-brand-border flex items-center justify-center text-xs hover:bg-brand-light"
+                            className="w-9 h-9 border border-brand-border flex items-center justify-center text-xs hover:bg-brand-light"
                             aria-label="数量を増やす"
                           >
                             ＋

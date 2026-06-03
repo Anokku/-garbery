@@ -11,7 +11,7 @@ export default function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '15%'])
 
   return (
-    <section ref={ref} className="relative w-full overflow-hidden" style={{ height: '100svh' }}>
+    <section ref={ref} className="relative w-full overflow-hidden h-[75svh] lg:h-[100svh]">
       {/* 背景画像（フェードイン + ズームイン + パララックス）*/}
       <motion.div
         className="absolute inset-0"
@@ -53,12 +53,14 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.9 }}
         >
-          <Link
-            href="/products"
+          <a
+            href="https://garbery.official.ec"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-[10px] tracking-widest2 text-white border-b border-white/50 pb-0.5 hover:border-white transition-colors duration-300"
           >
             SHOP NOW
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>

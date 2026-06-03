@@ -3,7 +3,7 @@ import Link from 'next/link'
 const navLinks = [
   { href: '/',         label: 'HOME' },
   { href: '/concept',  label: 'concept' },
-  { href: '/products', label: 'SHOP' },
+  { href: 'https://garbery.official.ec', label: 'SHOP' },
   { href: '/contact',  label: 'CONTACT' },
 ]
 
@@ -26,6 +26,17 @@ export default function Footer() {
         {/* ナビリンク */}
         <nav className="flex flex-wrap justify-center gap-6 md:gap-10 mb-8" aria-label="フッターナビゲーション">
           {navLinks.map((link) => (
+            link.href.startsWith('http') ? (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] tracking-widest text-brand-gray hover:text-brand-black transition-colors duration-200"
+              >
+                {link.label}
+              </a>
+            ) : (
             <Link
               key={link.href}
               href={link.href}
@@ -33,6 +44,7 @@ export default function Footer() {
             >
               {link.label}
             </Link>
+            )
           ))}
         </nav>
 
@@ -43,7 +55,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className="text-brand-gray hover:text-brand-black transition-colors"
+            className="text-brand-gray hover:text-brand-black transition-colors p-3 -m-3"
           >
             <InstagramIcon />
           </a>
@@ -52,7 +64,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LINE"
-            className="text-brand-gray hover:text-brand-black transition-colors"
+            className="text-brand-gray hover:text-brand-black transition-colors p-3 -m-3"
           >
             <LineIcon />
           </a>

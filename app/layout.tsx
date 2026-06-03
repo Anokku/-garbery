@@ -1,10 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import { Noto_Sans_JP, Noto_Serif_JP } from 'next/font/google'
 import './globals.css'
-import { CartProvider } from '@/context/CartContext'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import CartDrawer from '@/components/ui/CartDrawer'
 
 const notoSans = Noto_Sans_JP({
   subsets: ['latin'],
@@ -60,16 +58,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja" className={`${notoSans.variable} ${notoSerif.variable}`}>
       <body>
-        <CartProvider>
-          {/* 固定サイドバー（デスクトップ）/ トップバー（モバイル） */}
           <Header />
-          <CartDrawer />
-          {/* サイドバー幅分オフセット + モバイルトップバー分パディング */}
           <div className="pt-12 lg:pt-0 lg:ml-[200px]">
             <main>{children}</main>
             <Footer />
           </div>
-        </CartProvider>
       </body>
     </html>
   )
