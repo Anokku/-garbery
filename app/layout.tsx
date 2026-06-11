@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Noto_Sans_JP, Noto_Serif_JP } from 'next/font/google'
 import './globals.css'
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
+import LayoutChrome from '@/components/layout/LayoutChrome'
 
 const notoSans = Noto_Sans_JP({
   subsets: ['latin'],
@@ -58,11 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja" className={`${notoSans.variable} ${notoSerif.variable}`}>
       <body>
-          <Header />
-          <div className="pt-12 lg:pt-0 lg:ml-[200px]">
-            <main>{children}</main>
-            <Footer />
-          </div>
+          <LayoutChrome>{children}</LayoutChrome>
       </body>
     </html>
   )
