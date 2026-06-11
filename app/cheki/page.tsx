@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import AnimatedSection, { StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection'
 
 export const metadata: Metadata = {
@@ -9,16 +10,19 @@ export const metadata: Metadata = {
 const casts = [
   {
     name: 'さらさん',
+    image: '/images/cheki/sara.jpg',
     deco: 'https://square.link/u/Be4svg8m',
     normal: 'https://square.link/u/gWtteH0x',
   },
   {
     name: 'miyu^._.^',
+    image: '/images/cheki/miyu.jpg',
     deco: 'https://square.link/u/ZDsY0oBS',
     normal: 'https://square.link/u/8KLXmBNQ',
   },
   {
     name: 'りりあ🦖',
+    image: '/images/cheki/riria.jpg',
     deco: 'https://square.link/u/QRxFKeb7',
     normal: 'https://square.link/u/4FOwyb1r',
   },
@@ -57,6 +61,15 @@ export default function ChekiPage() {
           {casts.map((cast) => (
             <StaggerItem key={cast.name}>
               <div className="border border-brand-border p-6">
+                <div className="relative w-full aspect-square mb-4 overflow-hidden">
+                  <Image
+                    src={cast.image}
+                    alt={cast.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
+                </div>
                 <p className="font-serif text-base font-light tracking-widest text-brand-black mb-4 text-center">
                   {cast.name}
                 </p>
