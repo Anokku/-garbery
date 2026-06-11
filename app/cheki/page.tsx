@@ -28,6 +28,27 @@ const casts = [
   },
 ]
 
+const tickets = [
+  {
+    name: 'VIPチケット',
+    time: '14:00入場',
+    note: '',
+    url: 'https://square.link/u/klf2cI36',
+  },
+  {
+    name: '一般チケット',
+    time: '15:00入場',
+    note: '',
+    url: 'https://square.link/u/gcZLfbso',
+  },
+  {
+    name: 'Laterチケット',
+    time: '16:00入場',
+    note: 'チェキ購入不可',
+    url: 'https://square.link/u/JFOkIY9B',
+  },
+]
+
 const notes = [
   'お一人様の購入枚数には上限がございます。',
   '在庫がなくなり次第、販売を終了いたします。',
@@ -56,7 +77,31 @@ export default function ChekiPage() {
           </p>
         </AnimatedSection>
 
+        {/* 入場チケット */}
+        <AnimatedSection delay={0.15} className="mb-14">
+          <p className="text-[10px] tracking-widest2 text-brand-gray mb-5 text-center">TICKET</p>
+          <StaggerContainer className="space-y-3">
+            {tickets.map((ticket) => (
+              <StaggerItem key={ticket.name}>
+                <a
+                  href={ticket.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary block w-full text-center py-4"
+                >
+                  <span className="block text-xs tracking-widest2">{ticket.name}</span>
+                  <span className="block text-[10px] text-brand-gray mt-1">
+                    {ticket.time}
+                    {ticket.note && `（${ticket.note}）`}
+                  </span>
+                </a>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </AnimatedSection>
+
         {/* キャストごとの購入カード */}
+        <p className="text-[10px] tracking-widest2 text-brand-gray mb-5 text-center">CHEKI</p>
         <StaggerContainer className="space-y-6 mb-14">
           {casts.map((cast) => (
             <StaggerItem key={cast.name}>
