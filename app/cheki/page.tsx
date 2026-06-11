@@ -61,7 +61,7 @@ export default function ChekiPage() {
           {casts.map((cast) => (
             <StaggerItem key={cast.name}>
               <div className="border border-brand-border p-6">
-                <div className="relative w-full aspect-square mb-4 overflow-hidden">
+                <div className="relative w-full aspect-[4/5] mb-4 overflow-hidden">
                   <Image
                     src={cast.image}
                     alt={cast.name}
