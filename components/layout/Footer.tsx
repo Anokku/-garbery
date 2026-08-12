@@ -4,7 +4,7 @@ const navLinks = [
   { href: '/',         label: 'HOME' },
   { href: '/concept',  label: 'concept' },
   { href: '/products', label: 'SHOP' },
-  { href: '/contact',  label: 'CONTACT' },
+  { href: 'https://thebase.com/inquiry/garbery-official-ec', label: 'CONTACT' },
 ]
 
 

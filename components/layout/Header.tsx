@@ -10,7 +10,7 @@ const navLinks = [
   { href: '/concept',                    label: 'concept',    external: false },
   { href: '/products',                   label: 'SHOP',       external: false },
   { href: '/membership',                 label: 'MEMBERSHIP', external: false },
-  { href: '/contact',                    label: 'CONTACT',    external: false },
+  { href: 'https://thebase.com/inquiry/garbery-official-ec', label: 'CONTACT', external: true },
 ]
 
 export default function Header() {
