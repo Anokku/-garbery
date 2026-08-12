@@ -14,7 +14,7 @@ export default function ConceptHero() {
         transition={{ duration: 1.8, ease: [0.25, 0.46, 0.45, 0.94] }}
       >
         <Image
-          src="/images/top/concept.png"
+          src="/images/top/concept.jpg"
           alt="GARBERY Concept"
           fill
           className="object-cover object-center"
