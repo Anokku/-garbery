@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Hero from '@/components/sections/Hero'
+import HeroGallery from '@/components/sections/HeroGallery'
 
 export const metadata: Metadata = {
   title: 'garbery',
@@ -7,5 +8,10 @@ export const metadata: Metadata = {
 }
 
 export default function HomePage() {
-  return <Hero />
+  return (
+    <>
+      <Hero />
+      <HeroGallery />
+    </>
+  )
 }
