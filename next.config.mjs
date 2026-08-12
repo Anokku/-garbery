@@ -11,6 +11,12 @@ const config = {
     ],
     formats: ['image/avif', 'image/webp'],
   },
+  async redirects() {
+    return [
+      { source: '/contact', destination: 'https://thebase.com/inquiry/garbery-official-ec', permanent: false },
+      { source: '/cart', destination: 'https://garbery.official.ec', permanent: false },
+    ]
+  },
 }
 
 export default config
