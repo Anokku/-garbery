@@ -17,7 +17,7 @@ export default function ConceptHero() {
           src="/images/top/concept.jpg"
           alt="GARBERY Concept"
           fill
-          className="object-cover object-center"
+          className="object-cover object-top"
           priority
           sizes="100vw"
         />
