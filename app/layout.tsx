@@ -1,7 +1,10 @@
 import type { Metadata, Viewport } from 'next'
 import { Noto_Sans_JP, Noto_Serif_JP } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import LayoutChrome from '@/components/layout/LayoutChrome'
+
+const GA_MEASUREMENT_ID = 'G-134TDLMVBQ'
 
 const notoSans = Noto_Sans_JP({
   subsets: ['latin'],
@@ -57,6 +60,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja" className={`${notoSans.variable} ${notoSerif.variable}`}>
       <body>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script id="gtag-init" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}');
+            `}
+          </Script>
           <LayoutChrome>{children}</LayoutChrome>
       </body>
     </html>
